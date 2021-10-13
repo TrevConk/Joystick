@@ -23,19 +23,21 @@ class PCF8591:
 
 class Joystick:
   
-  def __init__(self,address,adc):
+  def __init__(self,address):
     self.adc = PCF8591(address)
 
   def getX(self,address):
-    self.adc.read(0)
+    self.getX = self.adc.read(0)
 
   def getY(self, address):
-    self.adc.read(1)
+    self.getY = self.adc.read(1)
+
+
+joy = Joystick(0x40)
 
 try:
   while(True):
-    print(Joystick().getX())
-    print(Joystick().getY())
+    print('{:>3},{:>3}'.format(joy.getY, joy.getY))
     time.sleep(.1)
 except Exception as e:
   print(e)
