@@ -24,7 +24,7 @@ class PCF8591:
 class Joystick:
   
   def __init__(self,address):
-    self.adc = PCF8591(0x48)
+    self.adc = self.PCF8591(0x48)
 
   def getX(self):
     self.getX = self.adc.read(0)
@@ -40,7 +40,7 @@ try:
     #print('{:>3},{:>3}'.format(joy.getX, joy.getY))
     print(joy.getX)
     print(joy.getY)
-    time.sleep(3)
+    time.sleep(5)
 except Exception as e:
   print(e)
   
