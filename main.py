@@ -37,8 +37,10 @@ joy = Joystick(0x40)
 
 try:
   while(True):
-    print('{:>3},{:>3}'.format(joy.getX, joy.getY))
-    time.sleep(.1)
+    #print('{:>3},{:>3}'.format(joy.getX, joy.getY))
+    print(joy.getX)
+    print(joy.getY)
+    time.sleep(3)
 except Exception as e:
   print(e)
   
