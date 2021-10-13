@@ -39,10 +39,8 @@ try:
   while(True):
     joy.getX()
     joy.getY()
-    #print('{:>3},{:>3}'.format(joy.getX, joy.getY))
-    print(joy.X)
-    print(joy.Y)
-    time.sleep(5)
+    print('{:>3},{:>3}'.format(joy.X, joy.Y))
+    time.sleep(.1)
 except Exception as e:
   print(e)
   
