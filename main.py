@@ -32,13 +32,13 @@ class Joystick:
   def getY(self, address):
     self.adc.read(1)
 
-while(True):
-  try:
+try:
+  while(True):
     print(Joystick().getX())
     print(Joystick().getY())
     time.sleep(.1)
-  except:
-    print("keyboard interrupt")
+except Exception as e:
+  print(e)
   
 
   
