@@ -31,6 +31,11 @@ class Joystick:
 
   def getY(self, address):
     self.adc.read(1)
+
+  while(True):
+    print(getX)
+    print(getY)
+    time.sleep(.1)
   
 
   
