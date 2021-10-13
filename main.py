@@ -26,10 +26,10 @@ class Joystick:
   def __init__(self,address):
     self.adc = PCF8591(0x48)
 
-  def getX(self,address):
+  def getX(self):
     self.getX = self.adc.read(0)
 
-  def getY(self, address):
+  def getY(self):
     self.getY = self.adc.read(1)
 
 
